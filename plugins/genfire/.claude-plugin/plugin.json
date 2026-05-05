@@ -1,0 +1,14 @@
+{
+  "name": "genfire",
+  "description": "Use the GenFire CLI from Claude Code in plain English — generate images, videos, music, sound effects, and lipsync; run multi-step workflow pipelines; reference your trained influencers with @-mentions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "GenFire",
+    "email": "hello@genfire.ai",
+    "url": "https://genfire.ai"
+  },
+  "homepage": "https://genfire.ai/cli",
+  "repository": "https://github.com/genfireai/skills",
+  "license": "MIT",
+  "keywords": ["genfire", "ai", "video", "image", "generation", "cli"]
+}
