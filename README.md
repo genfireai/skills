@@ -6,32 +6,36 @@ Instead of paying the per-call schema cost of an MCP server, agents read a singl
 
 ## Install
 
-### Claude Code marketplace
+### Claude Code (recommended)
 
 ```bash
 /plugin marketplace add genfireai/skills
+/plugin install genfire-generate@genfire
+/plugin install genfire-workflow@genfire
+/plugin install genfire-runs@genfire
+/plugin install genfire-account@genfire
 ```
 
-### Manual install (any agent)
+Or install all at once after adding the marketplace:
+
+```bash
+/plugin install genfire-generate@genfire genfire-workflow@genfire genfire-runs@genfire genfire-account@genfire
+```
+
+### Manual install (any agent that supports SKILL.md)
 
 ```bash
 git clone https://github.com/genfireai/skills.git ~/.claude/skills/genfire
-```
-
-Or via the [skills CLI](https://github.com/anthropics/skills):
-
-```bash
-npx skills add genfireai/skills
 ```
 
 ## Skills included
 
 | Skill | When the agent uses it |
 |---|---|
-| [`genfire-generate`](./skills/genfire-generate.md) | User asks to generate an image, video, speech, music, or sound effect |
-| [`genfire-workflow`](./skills/genfire-workflow.md) | User asks to run a published workflow (storyboard, hook pack, etc.) or wants a multi-step pipeline |
-| [`genfire-runs`](./skills/genfire-runs.md) | User asks about past generations, wants to re-download an output, or wants to debug a failed run |
-| [`genfire-account`](./skills/genfire-account.md) | User asks about their account, credit balance, or available models |
+| [`genfire-generate`](./skills/genfire-generate/SKILL.md) | User asks to generate an image, video, speech, music, or sound effect |
+| [`genfire-workflow`](./skills/genfire-workflow/SKILL.md) | User asks to run a published workflow (storyboard, hook pack, etc.) or wants a multi-step pipeline |
+| [`genfire-runs`](./skills/genfire-runs/SKILL.md) | User asks about past generations, wants to re-download an output, or wants to debug a failed run |
+| [`genfire-account`](./skills/genfire-account/SKILL.md) | User asks about their account, credit balance, or available models |
 
 ## Prerequisites
 

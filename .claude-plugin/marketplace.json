@@ -1,0 +1,33 @@
+{
+  "name": "genfire",
+  "owner": {
+    "name": "GenFire",
+    "email": "hello@genfire.ai",
+    "url": "https://genfire.ai"
+  },
+  "metadata": {
+    "description": "Skills that teach Claude Code, Cursor, and OpenCode how to use the GenFire CLI for generative media — images, videos, music, sound effects, lipsync, workflows, and trained influencer characters."
+  },
+  "plugins": [
+    {
+      "name": "genfire-generate",
+      "source": "./skills/genfire-generate",
+      "description": "Generate images, videos, speech, music, or sound effects with the GenFire CLI. Use when the user asks to create, render, generate, or make any of these media types — including with @influencer mentions."
+    },
+    {
+      "name": "genfire-workflow",
+      "source": "./skills/genfire-workflow",
+      "description": "Run published GenFire workflows (multi-step graph pipelines for storyboards, hook packs, branded ads, product shoots). Use when the user asks for a higher-level outcome that's a pipeline of multiple generation steps rather than a single asset."
+    },
+    {
+      "name": "genfire-runs",
+      "source": "./skills/genfire-runs",
+      "description": "Inspect, debug, and re-download past GenFire generations. Use when the user asks about a previous generation, wants to know what happened to a job, asks to redownload an old output, or asks why something failed."
+    },
+    {
+      "name": "genfire-account",
+      "source": "./skills/genfire-account",
+      "description": "Check the user's GenFire account info, credit balance, available models, or model pricing. Use when the user asks about their account, credits, billing, what models are available, or wants to estimate the cost of a generation before running it."
+    }
+  ]
+}
