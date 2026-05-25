@@ -56,12 +56,20 @@ genfire generate image "<prompt>" -m <model> -o <output_path>
 Common flags:
 - `-a 16:9` (or `1:1`, `9:16`, `4:3`, `3:4`, `21:9`, `9:21`) — aspect ratio
 - `-n 4` — generate 1-4 variants
-- `-i <url-or-path>` — reference image (local files auto-upload)
+- `-i <url-or-path>` — reference image (local files auto-upload). **Repeatable** — pass `-i` multiple times for a multi-image edit (up to 14 inputs). Supplying any `-i` routes to the model's edit endpoint where one exists.
 - `--no-download` — skip auto-download, just print URLs
+
+Multi-image edit is supported by `image.gpt_image_2`, Seedream, Qwen Image 2, and the Nano Banana family. Grok uses at most the first 3 inputs. This mirrors the GenFire web editor, which accepts up to 14 source images per edit.
 
 Example with everything:
 ```bash
 genfire generate image "a neon-lit alley at dusk, cinematic" -m image.nano_banana_2 -a 16:9 -n 2 -o ./alleys
+```
+
+Multi-image edit (combine several source images into one edit):
+```bash
+genfire generate image "blend these into one cohesive product shot" \
+  -m image.gpt_image_2 -i ./bottle.png -i ./label.png -i ./background.jpg -o ./out
 ```
 
 ### Video
