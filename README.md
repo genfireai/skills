@@ -13,7 +13,7 @@ Instead of paying the per-call schema cost of an MCP server, agents read a singl
 /plugin install genfire@genfire
 ```
 
-Two commands. All four skills install together.
+Two commands. All five skills install together.
 
 ### Manual install (any agent that supports SKILL.md)
 
@@ -21,11 +21,12 @@ Two commands. All four skills install together.
 git clone https://github.com/genfireai/skills.git ~/.claude/skills/genfire
 ```
 
-## Skills included (all four bundled in the `genfire` plugin)
+## Skills included (all five bundled in the `genfire` plugin)
 
 | Skill | When the agent uses it |
 |---|---|
 | [`genfire-generate`](./plugins/genfire/skills/genfire-generate/SKILL.md) | User asks to generate an image, video, speech, music, or sound effect |
+| [`genfire-faceless-reels`](./plugins/genfire/skills/genfire-faceless-reels/SKILL.md) | User asks to make a faceless reel / TikTok-Reels-Shorts short, or automate recurring short-form content |
 | [`genfire-workflow`](./plugins/genfire/skills/genfire-workflow/SKILL.md) | User asks to run a published workflow (storyboard, hook pack, etc.) or wants a multi-step pipeline |
 | [`genfire-runs`](./plugins/genfire/skills/genfire-runs/SKILL.md) | User asks about past generations, wants to re-download an output, or wants to debug a failed run |
 | [`genfire-account`](./plugins/genfire/skills/genfire-account/SKILL.md) | User asks about their account, credit balance, or available models |

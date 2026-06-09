@@ -6,13 +6,13 @@
     "url": "https://genfire.ai"
   },
   "metadata": {
-    "description": "Skills that teach Claude Code, Cursor, and OpenCode how to use the GenFire CLI for generative media — images, videos, music, sound effects, lipsync, workflows, and trained influencer characters."
+    "description": "Skills that teach Claude Code, Cursor, and OpenCode how to use the GenFire CLI for generative media — images, videos, music, sound effects, lipsync, faceless reels, workflows, and trained influencer characters."
   },
   "plugins": [
     {
       "name": "genfire",
       "source": "./plugins/genfire",
-      "description": "All four GenFire skills in one install — generate, workflow, runs, and account. Auto-loaded based on the user's request."
+      "description": "All GenFire skills in one install — generate, faceless-reels, workflow, runs, and account. Auto-loaded based on the user's request."
     }
   ]
 }

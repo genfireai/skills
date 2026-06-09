@@ -80,6 +80,7 @@ genfire generate video "<prompt>" -m <model> -d <seconds> -o <output_path>
 
 - `-i <url-or-path>` — reference image for image-to-video models
 - `-a` aspect ratio (16:9, 9:16, 1:1)
+- `-r <resolution>` — output resolution, model-dependent (e.g. 480p, 720p, 1080p). Higher resolutions cost more credits; run `genfire models get <id>` to see supported values.
 - `--no-audio` — disable audio if model supports it
 
 Video generations are async and can take 30s-5min. The CLI auto-polls. To run async without waiting:
@@ -94,6 +95,13 @@ genfire generate video "..." -m video.veo_3_1 --no-wait
 genfire generate speech "<text>"  --voice-id <id> -o <out.mp3>
 genfire generate music  "<prompt>" -d 30 [--instrumental] -o <out.mp3>
 genfire generate sfx    "<prompt>" -d 5 [--loop] -o <out.mp3>
+```
+
+**Music models:** default is ElevenLabs (duration set via `-d`, optional `--instrumental`). For full structured songs with vocals/lyrics (up to 3 min), use Google Lyria 3 Pro — it ignores `-d` and instead accepts an inspiration image and a negative prompt:
+
+```bash
+genfire generate music "epic cinematic orchestral, triumphant, 90 BPM, soulful female vocals" \
+  -m music.lyria3_pro [--image-url <url>] [--negative-prompt "low quality, distorted"] -o <out.mp3>
 ```
 
 ## Lipsync (combine video + audio)
